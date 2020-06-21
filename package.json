@@ -1,14 +1,14 @@
 {
   "name": "typescript-starter",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A basic typescript app starter for newbies in 2019.",
   "main": "index.js",
   "scripts": {
     "build": "rimraf ./build && tsc",
     "start": "nodemon",
     "start:prod": "npm run build && node build/index.js",
-    "web": "npm --prefix src/legality/web start",
-    "web:tc": "npm --prefix src/legality/web run type-check",
+    "web": "npm --prefix src/web start",
+    "web:tc": "npm --prefix src/web run type-check",
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
   },
