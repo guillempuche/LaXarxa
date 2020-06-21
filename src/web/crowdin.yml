@@ -1,5 +1,0 @@
-files:
-  - source: /translations/es-%original_file_name%.md
-    translation: /translations/%two_letters_code%-%original_file_name%.md
-commit_message: "i18n-%language%: update %original_file_name%"
-append_commit_message: false
