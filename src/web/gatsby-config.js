@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `translations`,
-        path: `${__dirname}/src/translations`,
+        path: `${__dirname}/src/content/translations`,
       },
     },
     // https://www.gatsbyjs.org/packages/gatsby-transformer-remark/
