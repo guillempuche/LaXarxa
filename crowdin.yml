@@ -2,5 +2,7 @@
 files:
   - source: /src/web/src/translations/es-*.md
     translation: /src/web/src/translations/%two_letters_code%-%original_file_name%.md
+    ignore:
+      - /src/web/src/translations/es-*.md
 commit_message: "i18n-%language%: update %original_file_name%"
 append_commit_message: false
