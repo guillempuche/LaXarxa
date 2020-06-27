@@ -8,7 +8,7 @@ title: "Ley"
 
 ## I. INTRODUCCION
 
-Las maneras de poder residir a España de forma legal son muchas pero casi la totalidad de esas maneras parte de la base de estar fuera de España (en el país de origen o en un país que residan de forma legal) y solicitar un visado en el consulado español del lugar de residencia dela persona extranjera (visado de estudios, visados de trabajo, visados para vivir y no trabajar, etc...) Podríamos decir que las tres únicas maneras más recuentes para poder residir legalmente en España si se ha llegado a España de forma irregular, es decir sin ningún visado, o se ha venido con visado de turista y no se ha ido del territorio español, son:
+Il existe de nombreuses façons de pouvoir résider légalement en Espagne, mais elles commencent presque toutes par le fait de se trouver hors d'Espagne (dans le pays d'origine ou dans un pays où l'on réside légalement) et de demander un visa auprès du consulat espagnol du lieu de résidence de l'étranger (visa d'études, visa de travail, visa pour vivre et ne pas travailler, etc). On pourrait dire que les trois seules façons les plus courantes de pouvoir résider légalement en Espagne si l'on est arrivé en Espagne de façon irrégulière, c'est-à-dire sans visa, ou si l'on est venu avec un visa de touriste et que l'on n'a pas quitté le territoire espagnol, sont:
 
 1. Arraigo social: es la vía más utilizada y solamente se puede realizar cuando se acredita que se ha estado en España de forma continuada durante tres años. Para demostrar estos tres años se tiene que haber estado siempre empadronado.
 2. Matrimonio/Pareja de hecho con una persona de nacionalidad europea que resida en España.
