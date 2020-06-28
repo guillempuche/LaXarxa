@@ -1,6 +1,8 @@
 # More Crowdin's settings on: https://support.crowdin.com/configuration-file/#writing-a-simple-configuration-file
 files:
-  - source: /src/web/src/content/*.md
-    translation: /src/web/src/content/translations/%two_letters_code%-%original_file_name%
+  - source: /src/web/src/content/*.*
+    translation: /src/web/src/content/translations/%two_letters_code%-%file_name%.%file_extension%
+    ignore:
+      - /src/web/src/content/i18n.tsx
 commit_message: "i18n-%language%: update %original_file_name%"
 append_commit_message: false
