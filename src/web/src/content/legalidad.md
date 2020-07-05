@@ -1,6 +1,5 @@
 ---
 path: "/"
-updated: "2020-5-4"
 title: "Ley"
 ---
 
@@ -21,7 +20,7 @@ Para poder tener la residencia, el menor de 18 años que se encuentra en España
 CÓMO OBTENER EL PASAPORTE
 El pasaporte es el documento indispensable para tramitar cualquier documento, porque es el que identifica a la persona.
 
-1. Procedimiento: (….) Preguntar als centres!
+1. Procedimiento: (…) Preguntar als centres!
 2. A tener en cuenta:
    -El consulado de Marruecos está enviando a funcionarios de marruecos a verificar los datos relativos a la edad en cada municipio .. este parece que puede ser el motivo por el cual el consulado tarde tanto para realizar el pasaporte.
 
