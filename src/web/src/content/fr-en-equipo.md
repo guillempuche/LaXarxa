@@ -1,10 +1,10 @@
 ---
-path: "/equipo"
-updated: "2020-5-9"
-title: "Equipo"
+path: "/team"
+updated: "9/5/2020"
+title: "Team"
 ---
 
-# Equipo
+# Team
 
-1. Programador - Guillem Puche
-2. Abogada - Laia Costa
+1. Programmer - Guillem Puche
+2. Lawyer - Laia Costa
