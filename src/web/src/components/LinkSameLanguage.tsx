@@ -4,7 +4,7 @@ import { usePageContext } from "../shared/PageContext";
 
 interface LinkProps {
   to: String;
-  ref: String;
+  ref?: String;
   [rest: string]: any;
 }
 

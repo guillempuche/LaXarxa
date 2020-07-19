@@ -1,18 +1,18 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import "../styles/layout.module.scss";
 import TopBar from "./TopBar";
-import BottomBar from "./BottomBar";
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div style={{ margin: `1rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+    <div>
       <Helmet>
+        <meta charSet="utf-8" />
         <title>Xarxa</title>
       </Helmet>
       <TopBar />
       {children}
-      {/* <BottomBar /> */}
     </div>
   );
 };

@@ -1,10 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const NotFoundPage: React.FC = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
-);
+import Link from "../components/LinkSameLanguage";
 
-export default NotFoundPage;
+const NotFound: React.FC = () => {
+  const { t } = useTranslation("general");
+  return (
+    <div>
+      <h1>{t("404.title")}</h1>
+      <p>
+        {t("404.text")} <Link to="/">{t("404.home")}</Link>
+      </p>
+    </div>
+  );
+};
+
+export default NotFound;
