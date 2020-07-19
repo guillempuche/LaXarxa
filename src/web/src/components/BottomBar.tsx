@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
-import { MarkdownRemark } from "../utils/graphql-types";
+import { MarkdownRemark } from "../types/graphql-types";
 
 type Edge = {
   node: MarkdownRemark;

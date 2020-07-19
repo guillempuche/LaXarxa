@@ -1,11 +1,11 @@
 import React from "react";
 
-import Language from "./Language";
+import Languages from "./Languages";
 
 const TopBar: React.FC = () => {
   return (
     <div>
-      <Language />
+      <Languages />
     </div>
   );
 };

@@ -1,60 +1,76 @@
+// Multilanguage example: https://itnext.io/techniques-approaches-for-multi-language-gatsby-apps-8ba13ff433c5
 const path = require("path");
+const config = require("./gatsby-config");
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
+/**
+ * Makes sure to create localized paths for each file in the /pages folder.
+ * For example, pages/404.js will be converted to /es/404.js and /ar/404.js and
+ * it will be accessible from https:// .../en/404/ and https:// .../el/404/
+ *
+ * Delete the original page automatically created by Gatsby, since we are
+ * gonna create localized versions of it. Finnally add a redirect header.
+ */
+exports.onCreatePage = async ({ page, actions }) => {
+  const { deletePage, createPage, createRedirect } = actions;
+  const originalPath = page.path;
 
-  // Get all names of the path name (it's extracted from the front matter information) of the markdown file (the table )
-  const result = await graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
-            }
-          }
-        }
-      }
-    }
-  `);
+  // Delete the original page automatically created by Gatsby.
+  await deletePage(page);
 
-  reporter.info(JSON.stringify(result));
+  // Create one page for each locale
+  await Promise.all(
+    config.siteMetadata.supportedLanguages.map(async (lang) => {
+      const localizedPath = `/${lang}${page.path}`;
 
-  // Handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return;
+      await createPage({
+        // Pass on everything from the original page
+        ...page,
+        // Since page.path returns with a trailing slash (e.g. "/es/").
+        // We want to remove that path: removeTrailingSlash(localizedPath).
+        path: localizedPath,
+        // Pass in the locale as context to every page.
+        // This context also gets passed to the src/components/layout file.
+        // This should ensure that the locale is available on every page.
+        context: {
+          ...page.context,
+          originalPath,
+          locale: lang,
+        },
+      });
+    }),
+  );
+
+  // Create a fallback redirect if the language is not supported or the
+  // Accept-Language header is missing for some reason
+  createRedirect({
+    fromPath: originalPath,
+    toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
+    isPermanent: false,
+    redirectInBrowser: process.env.NODE_ENV !== "production",
+    statusCode: 301,
+  });
+};
+
+/**
+ * To ease the searching of Mardkown files in React components and
+ * Gatsby pages we add some variables (`locale` and `filename`) to
+ * the Gatsby plugin Markdown Remark. It's necessary to do that,
+ * otherwise you couldn't filter by locale (language) and file name.
+ */
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions;
+
+  // Check for `MarkdownRemark` type (nodes created by Markdown Remark
+  // plugin), so other nodes (e.g. `site`) are excluded.
+  if (node.internal.type === `MarkdownRemark`) {
+    // Get the locale and create a field.
+    const folderPath = path.dirname(node.fileAbsolutePath);
+    const folderName = path.basename(folderPath);
+    createNodeField({ node, name: `locale`, value: folderName });
+
+    // Get the filename only from the markdown file (it has the extension .md)
+    // and create a field.
+    const fileName = path.basename(node.fileAbsolutePath, ".md");
+    createNodeField({ node, name: `filename`, value: fileName });
   }
-
-  // // Create a page for each the path name, they will called as the path name.
-  // result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-  //   reporter.info(JSON.stringify(node));
-  //   reporter.info(path.resolve("./src/components/Content.tsx"));
-
-  //   createPage({
-  //     path: node.frontmatter.path,
-  //     // Component where deals with the content for each page.
-  //     component: path.resolvequery GetContent {
-  //       allMarkdownRemark {
-  //         edges {
-  //           node {
-  //             frontmatter {
-  //               path
-  //             }
-  //           }
-  //         }
-  //       }
-  //       site {
-  //         siteMetadata {
-  //           siteName
-  //         }("./src/components/Content.tsx"),
-  //     // context: {
-  //     //   path: node.frontmatter.path,
-  //     // },
-  //   });
-  //   // createPage({
-  //   //   path: node.frontmatter.path,
-  //   //   component: path.resolve("./src/components/BottomBar.tsx"),
-  //   // });
-  // });
 };
