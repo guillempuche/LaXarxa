@@ -1,0 +1,10 @@
+{
+  "_comment": "How the name structure is? Top-bottom component, then contextual meaning, eg: 'topbar-list-language-es",
+  "topbar": {
+    "list-language": {
+      "es": "Español",
+      "ar": "Árabe",
+      "fr": "Francés"
+    }
+  }
+}
