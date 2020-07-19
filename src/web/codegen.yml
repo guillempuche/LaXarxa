@@ -3,6 +3,6 @@
 
 schema: http://localhost:8000/___graphql
 generates:
-  ./src/utils/graphql-types.ts:
+  ./src/types/graphql-types.ts:
     plugins:
       - typescript

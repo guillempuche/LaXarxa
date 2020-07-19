@@ -17,14 +17,19 @@
     "lint:fix": "npm run lint --fix"
   },
   "dependencies": {
-    "gatsby": "^2.23.1",
+    "bootstrap": "^4.5.0",
+    "gatsby": "^2.24.2",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-typescript": "^2.4.0",
+    "gatsby-remark-emojis": "^0.4.3",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^2.8.4",
+    "i18next": "^19.5.1",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.2.2",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-i18next": "^11.7.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^1.15.1",
@@ -33,7 +38,7 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "eslint-plugin-react": "^7.19.0",
-    "graphql": "^14.6.0",
+    "graphql": "^14.7.0",
     "typescript": "^3.8.3"
   },
   "author": "Guillem Puche",
