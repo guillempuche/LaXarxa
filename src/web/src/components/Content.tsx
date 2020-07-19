@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-import { MarkdownRemark, Query } from "../utils/graphql-types";
+import { MarkdownRemark, Query } from "../types/graphql-types";
 
 interface Props {
   // data: { markdownRemark: MarkdownRemark, };
@@ -12,7 +12,15 @@ interface Props {
 // const Content: React.FC<Props> = ({ data }) => {
 const Content: React.FC = () => {
   // const Content = ({ data }: Props) => {
-  const data = useStaticQuery(graphql`
+  const [data, setData] = useState();
+  // let location = useLocation// Start i18n
+  // import "../content/i18n";();
+
+  // useEffect(()=>{
+  //   useLocation()
+  // }, [])
+
+  let { data: any } = useStaticQuery(graphql`
     query GetContent {
       markdownRemark(frontmatter: { path: { eq: "/" } }) {
         html
@@ -23,6 +31,12 @@ const Content: React.FC = () => {
       }
     }
   `);
+  // useEffect(() => {
+  //   if (!location.pathname) return;
+
+  //   console.log("query", query);
+  //   setData(query.data);
+  // }, [location]);
 
   if (!data) return <>Cargando...</>;
 

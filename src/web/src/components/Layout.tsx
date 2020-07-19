@@ -8,11 +8,11 @@ const Layout: React.FC = ({ children }) => {
   return (
     <div style={{ margin: `1rem auto`, maxWidth: 650, padding: `0 1rem` }}>
       <Helmet>
-        <title>Web</title>
+        <title>Xarxa</title>
       </Helmet>
       <TopBar />
       {children}
-      <BottomBar />
+      {/* <BottomBar /> */}
     </div>
   );
 };
