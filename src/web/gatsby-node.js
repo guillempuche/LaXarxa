@@ -47,7 +47,7 @@ exports.onCreatePage = async ({ page, actions }) => {
     toPath: `/${config.siteMetadata.defaultLanguage}${originalPath}`,
     isPermanent: true,
     // Only redirect in the browser during the development.
-    redirectInBrowser: process.env.NODE_ENV !== "production",
+    redirectInBrowser: true, // process.env.NODE_ENV !== "production",
   });
 };
 
