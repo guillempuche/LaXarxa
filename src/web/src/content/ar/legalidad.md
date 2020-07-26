@@ -2,11 +2,11 @@
 title: "Ley"
 ---
 
-Información sobre los **trámites administrativos** que deben conocer los jóvenes que emigran solos para residir en España.
+معلومات عن الإجراءات الإدارية التي يجب أن يعرفها الشباب الذين يهاجرون بمفردهم للإقامة في إسبانيا.
 
-Las maneras de poder residir a España de forma legal son muchas pero casi la totalidad de esas maneras parte de la base de estar fuera de España (en el país de origen o en un país que residan de forma legal) y solicitar un visado en el consulado español del lugar de residencia dela persona extranjera (visado de estudios, visados de trabajo, visados para vivir y no trabajar, etc...).
+تعد طرق الإقامة في إسبانيا بشكل قانوني كثيرة ولكن معظم هذه الطرق تقريبًا تستند إلى أن تكون خارج إسبانيا (في بلد المنشأ أو في بلد مقيم بشكل قانوني) وطلب تأشيرة في القنصلية الإسبانية لمكان إقامة الشخص الأجنبي (تأشيرة الدراسة ، تأشيرة العمل ، تأشيرة العيش وعدم العمل ، إلخ...).
 
-Podríamos decir que las 3 únicas maneras más recuentes para poder residir legalmente en España si se ha llegado a España de forma irregular, es decir sin ningún visado, o se ha venido con visado de turista y no se ha ido del territorio español, son:
+يمكننا أن نقول أن الطرق الثلاث الأكثر شيوعًا للتمكن من الإقامة بشكل قانوني في إسبانيا إذا وصلت إلى إسبانيا بشكل غير منتظم ، أي بدون تأشيرة ، أو إذا كنت قد حصلت على تأشيرة سياحية ولم تغادر الأراضي الإسبانية ، هي:
 
 1. Arraigo social: es la vía más utilizada y solamente se puede realizar cuando se acredita que se ha estado en España de forma continuada durante tres años. Para demostrar estos tres años se tiene que haber estado siempre empadronado.
 2. Matrimonio/Pareja de hecho con una persona de nacionalidad europea que resida en España.
