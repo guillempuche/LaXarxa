@@ -43,11 +43,13 @@ exports.onCreatePage = async ({ page, actions }) => {
   // Create a fallback redirect if the language is not supported or the
   // Accept-Language header is missing for some reason
   createRedirect({
+    // fromPath can be path "/"
     fromPath: originalPath,
+    // toPath is the localized path, "/es/"
     toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
     isPermanent: true,
     // Only redirect in the browser during the development.
-    redirectInBrowser: true, //process.env.NODE_ENV !== "production",
+    redirectInBrowser: process.env.NODE_ENV !== "production",
   });
 };
 
