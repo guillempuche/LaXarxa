@@ -20,7 +20,7 @@ exports.onCreatePage = async ({ page, actions }) => {
   // Create one page for each locale
   await Promise.all(
     config.siteMetadata.supportedLanguages.map(async (lang) => {
-      const localizedPath = `/${lang}${page.path}`;
+      const localizedPath = `/${lang}${originalPath}`;
 
       await createPage({
         // Pass on everything from the original page
@@ -40,13 +40,11 @@ exports.onCreatePage = async ({ page, actions }) => {
     }),
   );
 
-  // Create a fallback redirect if the language is not supported or the
-  // Accept-Language header is missing for some reason
+  // Create a fallback redirect if the path doesn't contain the supported languages.
   createRedirect({
-    // fromPath can be path "/"
-    fromPath: originalPath,
-    // toPath is the localized path, "/es/"
-    toPath: `/${config.siteMetadata.defaultLanguage}${page.path}`,
+    fromPath: "/",
+    // Add the default language to the path, "/es/"
+    toPath: `/${config.siteMetadata.defaultLanguage}${originalPath}`,
     isPermanent: true,
     // Only redirect in the browser during the development.
     redirectInBrowser: process.env.NODE_ENV !== "production",
