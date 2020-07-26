@@ -6,5 +6,10 @@
       "ar": "Árabe",
       "fr": "Francés"
     }
+  },
+  "404": {
+    "title": "La página no existe",
+    "text": "Puedes ir a esta página:",
+    "home": "Leyes"
   }
 }
